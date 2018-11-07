@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Adli Thirafi Soeratin</title>
+  </head>
+  <style>
+  /* navbar*/
+  .bd-navbar {
+    min-height: 4rem;
+    background-color: transparent;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  }
+
+  /* Navbar logo */
+    .press-bar-1{
+      padding: 13px 0;
+      margin: 35px;
+      background-color: transparent;
+    }
+
+    #naikturunbody {
+      transform: translateY(-65px);
+    }
+    .depan {
+      z-index: 99;
+    }
+
+  /* earth */
+  .earth-demo {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  }
+
+  .earth-demo:before {
+  background: url(https://cssanimation.rocks/images/random/space2.jpg) repeat center;
+  background-size: cover;
+  content: "";
+  opacity: .5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  }
+
+  .earth {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  }
+  .earth img {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+  .earth .more-info {
+  background-image: linear-gradient(to bottom, #0a0a0a, black);
+  border-radius: 1em;
+  color: #fff;
+  opacity: 0;
+  padding: 1em;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  width: 400px;
+  }
+  .earth .more-info h1 {
+  margin: 0 0 1em;
+  text-align: right;
+  }
+  .earth .more-info h1, .earth .more-info li {
+  font-family: 'Space Mono', monospace;
+  opacity: 0;
+  }
+
+  .moon-container {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  }
+
+  .moon {
+  -webkit-animation: spin 20s linear infinite;
+          animation: spin 20s linear infinite;
+  background: none;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  -webkit-transform-origin: 25px;
+          transform-origin: 25px;
+  }
+  .moon img {
+  -webkit-transform: translateX(-160px) translateY(-160px);
+          transform: translateX(-160px) translateY(-160px);
+  width: 50px;
+  }
+
+  .earth img, .moon img {
+  border-radius: 50%;
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+  }
+
+  .earth:hover img, .earth.active img {
+  -webkit-transform: translateX(-75px) translateY(-75px) scale(0.5);
+          transform: translateX(-75px) translateY(-75px) scale(0.5);
+  }
+  .earth:hover ~ .moon-container, .earth.active ~ .moon-container {
+  -webkit-transform: translateX(-75px) translateY(-75px) scale(0.4);
+          transform: translateX(-75px) translateY(-75px) scale(0.4);
+  }
+  .earth:hover ~ .moon-container img, .earth.active ~ .moon-container img {
+  -webkit-transform: translateX(-140px) translateY(-140px);
+          transform: translateX(-140px) translateY(-140px);
+  }
+  .earth:hover .more-info, .earth.active .more-info {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  }
+  .earth:hover .more-info h1, .earth:hover .more-info li, .earth.active .more-info h1, .earth.active .more-info li {
+  opacity: 1;
+  }
+
+  * {
+  transition: all 4s cubic-bezier(0, 1.5, 0.3, 1);
+  }
+
+  @-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  }
+
+  @keyframes spin {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  }
+
+  .post-header{
+    font-size: 16px;
+    background-color: #ccc;
+    height: 26em;
+    overflow: hidden;
+    position: relative;
+  }
+  /* The end of Earth */
+
+  /* clock */
+  .clock{
+    color: #fff;
+    font-size: 120px;
+  }
+
+  /* Work Experience Bar */
+  .image-xxs{
+    max-height: 2.5em;
+  }
+
+  .image-xs{
+    max-height:7em;
+  }
+
+/* Introduction, Hello My Name is Adli */
+  .jumbotron{
+    background-color: white;
+  }
+
+
+  </style>
+
+
+  <body>
+    <!-- Navbar  -->
+  <header class="depan navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand" href="#">
+      <img src="http://logo.pizza/img/mr-grin/mr-grin.png" alt="" width="40" height="40";>
+    </a>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'About Me');">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Work');">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://drive.google.com/file/d/1iBtDDS672kBwsEXLJfTaqcpT_DWT4fkr/view?usp=sharing" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Resume');">Resume</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://www.instagram.com/adlithirafi/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://mbtskoudsalg.com/images/instagram-png-transparent-background.png" alt="" width="20" height="20";>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://twitter.com/adlithirafi" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="https://png.pngtree.com/element_our/md/20180509/md_5af2d4c9325e1.png" alt="" width="32" height="32";>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://id.linkedin.com/in/adlithirafi" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="https://png.pngtree.com/element_our/md/20180509/md_5af2d4cb7fc9b.png" alt="" width="32" height="32";>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+<div id="naikturunbody">
+  <!-- earth  -->
+  <section class="post-header">
+    <article class="earth-demo">
+      <div class="earth">
+        <div class="more-info">
+          <div class="text-center" id="MyClockDisplay" class="clock"><br></div><br>
+            <h4 class="text-justify">"Earth keeps Spinning, Time Keeps Running. I Keep Growing."</h4>
+            <blockquote class="blockquote text-right">
+              <footer class="blockquote-footer"><cite title="Source Title">Adli Thirafi Soeratin</cite></footer>
+            </blockquote>
+        </div>
+        <img src="https://cssanimation.rocks/images/random/earth.png">
+      </div>
+      <div class="moon-container">
+        <div class="moon">
+          <img src="https://cssanimation.rocks/images/random/moon.png">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Experience Place -->
+  <section class="press-bar-1">
+    <div class="container">
+      <div class="row">
+        <div class="press-logo col-xs-6 col-sm-2 text-center">
+          <a href="http://www.danareksa.com/ibment/ibment.html" target="_blank">
+          <img class="image-xxs" src="http://yuknabungsaham.idx.co.id/files/uploads/securities/danareksa.png" alt="Danareksa">
+          </a>
+        </div>
+        <div class="press-logo col-xs-6 col-sm-2 text-center">
+          <a href="https://www.instagram.com/galeritiedye/?hl=en" target="_blank">
+          <img class="image-xs" src="https://lh3.googleusercontent.com/-ami4JqgBxyA/AAAAAAAAAAI/AAAAAAAACWE/KMoMCMFqw2Q/s640-il/photo.jpg" alt="Images">
+          </a>
+        </div>
+        <div class="press-logo col-xs-6 col-sm-3 text-center">
+          <a href="https://hacktiv8.com/" target="_blank">
+          <img class="image-xs" src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1482132470/vfmmn0twb17nn2epblee.png" alt="Images">
+          </a>
+        </div>
+        <div class="press-logo col-xs-6 col-sm-2 text-center">
+          <a href="https://www.linkedin.com/company/archibytes" target="_blank">
+          <img class="image-xs" src="https://scontent-sin6-2.cdninstagram.com/vp/79b11219820e6964da8c2b1dac8cbe7d/5C888319/t51.2885-19/s320x320/38097387_883193051877653_6798334184709423104_n.jpg" alt="Images">
+          </a>
+        </div>
+        <div class="press-logo col-xs-6 col-sm-2 text-center">
+          <a href="http://www.unpad.ac.id/fakultas/ekonomi/" target="_blank">
+          <img class="image-xxs" src="http://www.feb.unpad.ac.id/site/wp-content/uploads/2016/12/logofeunpad2-1.png" alt="Images">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- introduction -->
+  <section>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://scontent-sin2-2.xx.fbcdn.net/v/t1.0-9/37088864_10156556627169214_4796242309324734464_n.jpg?_nc_cat=106&_nc_ht=scontent-sin2-2.xx&oh=655308d299bc896d73cb6e258fcbaa0f&oe=5C8824C1" alt="Profile Picture"  width="500px" height="500px">
+          </div>
+          <div class="ml-auto col-md-6">
+            <h2 class="text-center"><br>Hello Everyone!, I'm Adli.</h2>
+            <br><br>
+              <blockquote>
+                <p class="lead text-monospace text-justify">
+                      "I'm a fresh Graduate from Padjadjaran University with a backgorund
+                      in Financial Management of Economic and Business, I am passionate
+                      about financial technology that are benefical to financial system
+                      on future. By educating myself in finance world and endless array
+                      of technological development. I hope that one day I will be able
+                      to devote myself to projects that are meaningful in the future."
+                </p>
+              </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- bottom -->
+  <div class="container-fluid">
+    <div class="card-deck">
+      <div class="card">
+        <a href="#" target="_blank">
+        <img class="card-img-top" src="http://sxsblog.com/wp-content/uploads/2016/09/Angry-Computer-Meme-04-777x437.png" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">My Blog</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Coming Soon </small>
+        </div>
+      </div>
+      <div class="card">
+        <a href="#" target="_blank">
+        <img class="card-img-top" src="https://www.askideas.com/media/30/Funny-Work-Week-Drawing-Pictur-For-Facebook.png" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Work & Organization Experience</h5>
+          <p class="card-text">Experience that I gains while working and organizing in a specific field or occupation.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Coming Soon </small>
+        </div>
+      </div>
+      <div class="card">
+        <a href="https://drive.google.com/file/d/1C-8YiiK5rZP1mq8GLWUzeA8IJN2gDho0/view?usp=sharing" target="_blank">
+        <img class="img-fluid" src="http://1.bp.blogspot.com/_Rue4_9jbJF4/TKIjdsDriTI/AAAAAAAAAj4/51D_RqA3MSA/s1600/resume+cartoon+Linchi+Kwok+Blog.jpg" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Resume</h5>
+          <p class="card-text">My tool in which the content should be adapted to suit each individual job application or applications aimed at a financial industry.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 11:22, 31 Oktober 2018 </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="copyright rounded float-left">
+        <a href="file:///C:/Kerja/Hacktiv/Adli/Fixed/home.html" rel="home" itemprop="url" class="logo">
+          <img width="40" src="http://logo.pizza/img/mr-grin/mr-grin.png" alt="">
+        </a>
+        © 2018 Adli Thirafi Soeratin
+      </div>
+      <div class="rounded float-right">
+        <a href="https://www.linkedin.com/in/adlithirafi/">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ln.svg" alt="">
+        </a>
+        <a href="https://twitter.com/adlithirafi">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/tw.svg" alt="">
+        </a>
+        <a href="https://ask.fm/adlithirafi">
+          <img height="24" width="24" src="https://vignette.wikia.nocookie.net/polscy-youtuberzy-eleven/images/d/d1/Owl_1024x1024.png/revision/latest?cb=20170818092057&path-prefix=pl" alt="">
+        </a>
+        <a href="https://www.instagram.com/adlithirafi/">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ins.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/adlithirafi">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/fb.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <br><br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- clock -->
+    <script type="text/javascript">
+      function showTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+
+        if(h == 0){
+            h = 12;
+        }
+
+        if(h > 12){
+            h = h - 12;
+            session = "PM";
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innterText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+    </script>
+    <!-- end of clock -->
+
+  </body>
+</html>
