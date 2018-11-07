@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Work Experience</title>
+  </head>
+  <style>
+    /* navbar*/
+    .bd-navbar {
+      min-height: 4rem;
+      background-color: transparent;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+    }
+
+    /* Navbar logo */
+      .press-bar-1{
+        padding: 13px 0;
+        margin: 35px;
+        background-color: transparent;
+      }
+
+      #naikturunbody {
+        transform: translateY(-65px);
+      }
+      .depan {
+        z-index: 99;
+      }
+
+      /* earth */
+      .earth-demo {
+      background: #000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      }
+
+      .earth-demo:before {
+      background: url(https://cssanimation.rocks/images/random/space2.jpg) repeat center;
+      background-size: cover;
+      content: "";
+      opacity: .5;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      }
+
+      .earth {
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 100px);
+      }
+      .earth img {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+      .earth .more-info {
+      background-image: linear-gradient(to bottom, #0a0a0a, black);
+      border-radius: 1em;
+      color: #fff;
+      opacity: 0;
+      padding: 1em;
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      width: 400px;
+      }
+      .earth .more-info h1 {
+      margin: 0 0 1em;
+      text-align: right;
+      }
+      .earth .more-info h1, .earth .more-info li {
+      font-family: 'Space Mono', monospace;
+      opacity: 0;
+      }
+
+      .moon-container {
+      position: absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
+      }
+
+      .moon {
+      -webkit-animation: spin 20s linear infinite;
+              animation: spin 20s linear infinite;
+      background: none;
+      width: 50px;
+      height: 50px;
+      pointer-events: none;
+      -webkit-transform-origin: 25px;
+              transform-origin: 25px;
+      }
+      .moon img {
+      -webkit-transform: translateX(-160px) translateY(-160px);
+              transform: translateX(-160px) translateY(-160px);
+      width: 50px;
+      }
+
+      .earth img, .moon img {
+      border-radius: 50%;
+      box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+      }
+
+      .earth:hover img, .earth.active img {
+      -webkit-transform: translateX(-75px) translateY(-75px) scale(0.5);
+              transform: translateX(-75px) translateY(-75px) scale(0.5);
+      }
+      .earth:hover ~ .moon-container, .earth.active ~ .moon-container {
+      -webkit-transform: translateX(-75px) translateY(-75px) scale(0.4);
+              transform: translateX(-75px) translateY(-75px) scale(0.4);
+      }
+      .earth:hover ~ .moon-container img, .earth.active ~ .moon-container img {
+      -webkit-transform: translateX(-140px) translateY(-140px);
+              transform: translateX(-140px) translateY(-140px);
+      }
+      .earth:hover .more-info, .earth.active .more-info {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      }
+      .earth:hover .more-info h1, .earth:hover .more-info li, .earth.active .more-info h1, .earth.active .more-info li {
+      opacity: 1;
+      }
+
+      * {
+      transition: all 4s cubic-bezier(0, 1.5, 0.3, 1);
+      }
+
+      @-webkit-keyframes spin {
+      to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+      }
+      }
+
+      @keyframes spin {
+      to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+      }
+      }
+
+      /* experience */
+      .post-header{
+        font-size: 16px;
+        background-color: #ccc;
+        height: 26em;
+        overflow: hidden;
+        position: relative;
+      }
+
+
+      /* clock */
+      .clock{
+        color: #fff;
+        font-size: 120px;
+      }
+
+      /* Work Experience Bar */
+      .image-xxs{
+        max-height: 2.5em;
+      }
+
+      .image-xs{
+        max-height:7em;
+      }
+  </style>
+  <body>
+    <!-- Navbar  -->
+  <header class="depan navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand" href="#">
+      <img src="http://logo.pizza/img/mr-grin/mr-grin.png" alt="" width="40" height="40";>
+    </a>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'About Me');">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Work');">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://drive.google.com/file/d/1iBtDDS672kBwsEXLJfTaqcpT_DWT4fkr/view?usp=sharing" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Resume');">Resume</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://www.instagram.com/adlithirafi/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://mbtskoudsalg.com/images/instagram-png-transparent-background.png" alt="" width="20" height="20";>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://twitter.com/adlithirafi" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="https://png.pngtree.com/element_our/md/20180509/md_5af2d4c9325e1.png" alt="" width="32" height="32";>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://id.linkedin.com/in/adlithirafi" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="https://png.pngtree.com/element_our/md/20180509/md_5af2d4cb7fc9b.png" alt="" width="32" height="32";>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+<div id="naikturunbody">
+  <!-- earth  -->
+  <section class="post-header">
+    <article class="earth-demo">
+      <div class="earth">
+        <div class="more-info">
+          <div class="text-center" id="MyClockDisplay" class="clock"><br></div><br>
+            <h4 class="text-justify">"Earth keeps Spinning, Time Keeps Running. I Keep Growing."</h4>
+            <blockquote class="blockquote text-right">
+              <footer class="blockquote-footer"><cite title="Source Title">Adli Thirafi Soeratin</cite></footer>
+            </blockquote>
+        </div>
+        <img src="https://cssanimation.rocks/images/random/earth.png">
+      </div>
+      <div class="moon-container">
+        <div class="moon">
+          <img src="https://cssanimation.rocks/images/random/moon.png">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Danareksa -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <div id="flip">
+      <img src="http://yuknabungsaham.idx.co.id/files/uploads/securities/danareksa.png" class="rounded mx-auto d-block" alt="Responsive image" width="255px;">
+      </div>
+      <br>
+        <div id="panel">
+        <h2 class="display-8">Intern in Investment Banking</h2>
+        <p class="lead text-justify">
+          The Investment Banking division of Danareksa helps companies and governments by raising funds through issuing
+          and selling securities in the capital markets (both equity and bond),
+          as well as providing advice on transactions such as mergers and acquisitions.
+          In funds raising business, clients can derive value from our recognized strength in capital resources as well as extensive network among domestic and global financial institutions,
+           which make for a successful underwriting exercise, from book building process up to the sale of securities.
+     <br>
+     <br>
+             In 2015, I was interning at <i>Investment Banking Danareksa Securities</i> in which I
+          learned on the technique of updating business research every morning from newspapers and
+          summarize information that related to corporate clients. Other than that, this internship also
+          thought me how to analyze the mining industry (such as understanding the pricing condition and
+          how to estimate the price of goods in the mining industry), perform <i>DuPont analysis calculation</i>
+          task for client investment prospects (such as understanding how to calculate with <i>DuPont
+          analysis</i>), and doing the task of inputting client company financial report data for the past 5
+          years (understanding how to compile financial statement). Beyond the tasks that I was given, I
+          have also received training in <i>financial modeling</i> in which it thought me how to input data to
+          excel, <i>Bloomberg application</i> to understand how to use the application properly for early user,
+          and received lecture regarding the introduction of capital market presented by Mr. Jenpino, the
+          President Director of <i>Danareksa Securities</i>. From this experience, I also gained knowledge on
+          how to prepare documents before an important meeting with clients. From this intern
+          program, I gained plenty of new financial skill that has never been thought in school, as well as
+          understanding the office environment. I’m glad I could be a part of <i>Investment Banking
+          Danareksa Securities</i>, which provided me knowledge and experience that I’ve never had before.
+        </p>
+  <hr>
+  <img src="https://bizenius.com/wp-content/uploads/2017/05/financial-modelling-program.png" class="rounded float-left" alt="Responsive image" width="200px;">
+  <br><br>
+  <a href="https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapId=61246065" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/id/5/53/Bloomberg_Indo.png" class="rounded float-right" alt="Responsive image" width="155px;">
+  </a>
+   <br>
+   <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galeri Tie Dye -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <div id="flip">
+      <img src="https://lh4.googleusercontent.com/-ami4JqgBxyA/AAAAAAAAAAI/AAAAAAAACWE/KMoMCMFqw2Q/il/photo.jpg" class="rounded mx-auto d-block" alt="Responsive image" width="255px;">
+      </div>
+      <br>
+        <div id="panel">
+        <h2 class="display-8">Director Operation and Head of Logistic</h2>
+        <p class="lead text-justify">
+          Galeri Tie Dye started with the ideas to be a medium for artist,
+          especially in Indonesia who wants to explore their sense of art in form of purely handmade Tie Dye Artwork
+          and also to give them a chance to be known in our society. Since 2014, we have succeed accomplish 3 phase of
+          collaboration with more than 50 local artists which commercially sold by auction.
+          The growing number of artist who wants to collaborate attract us to keep chasing our purpose to upscale our position
+          as a medium in art.
+        </p>
+          <div class="shadow-lg">
+            <div class="embed-responsive embed-responsive-21by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2zpnvPqUnsk" allowfullscreen></iframe>
+            </div>
+          </div>
+     <br>
+     <br>
+         <p class="lead text-justify">
+            As we seen the marvellous appreciation for our recent activity, it drives us to spread our wings to reach, not only artists,
+            but also educating our beloved society to get involved in activity of creating an art.
+            The level of appreciation that our people give to the art society is sadly, pretty low,
+            and we try to level up that kind of things by together learning how to love, manage and create an art,especially,
+            but not limited to tie-dye.
+        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hi2E48ojwf0" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">#Phase-3</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iquy3ducxyc" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">#Phase-2</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p class="lead text-justify">
+        Subjectively, we assume everyone can create Tie-Dye, because in fact it is simple, easy, and fun. We do provide to teach, sell,
+        and give information to start Tie-Dyeing nor any kind related to art and exhibition for everyone that curious expressing their self into a piece of magnificent art.
+        </p>
+        <p class="lead text-justify">
+         In 2014, <a href="https://id.linkedin.com/in/gamaldhana" target="_blank">Gamal Ramadhana</a>, <i>Founder of Galeri Tie Dye</i> and one of my college friends asked me to help him run his business.
+        I was very excited when he explained <i>Galeri Tie Dye's</i> Segmentation, Targeting, and Positioning <i>(STP)</i> and it made me want to be a part of it, along with his unique and brilliant idea. With that offer, <i>Galeri Tie Dye</i> has become one of the first businesses that I had experience in taking care of.
+        We were not the only ones who ran Galeri Tie Dye, there also <a href="https://www.linkedin.com/in/alriosuyoso/?originalSubdomain=id" target="_blank">Alrio Gaputra Suyoso</a> as<i> Founder of Galeri Tie Dye and Director of Marketing</i>,
+        <a href="https://www.linkedin.com/in/izza-reza-2ba818102/" target="_blank">Izza Reza</a> as <i>Director of Public Relation</i> and <a href="https://www.linkedin.com/in/janitrasatriani/?originalSubdomain=id" target="_blank">Janitra Satriani</a> as <i>Creative Director</i>.
+        <br>
+        <br>
+          My job is as <i>Operation Director and Head of Logistic</i>. I help clients collect raw materials to finish their tie dye processes until the goods are settled for auction and exhibiton,
+          teach costumer how to make tie dye clothes, also maintaining and preparing Galeri Tie Dye logistics for events and/or projects.
+        </p>
+        <hr>
+        <a href="https://www.instagram.com/galeritiedye/?hl=en" target="_blank">
+          <img src="https://www.edigitalagency.com.au/wp-content/uploads/Instagram-logo-black-borders-png-transparent-background.png" class="rounded mx-auto d-block" alt="Responsive image" width="25px;">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Archibytes  -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <div id="flip">
+      <img src="https://static.wixstatic.com/media/b65379_a96a3bad358849528143804bca9f2703~mv2.png/v1/fill/w_243,h_243,al_c,q_80,usm_0.66_1.00_0.01/b65379_a96a3bad358849528143804bca9f2703~mv2.webp" class="rounded mx-auto d-block" alt="Responsive image" width="255px;">
+      </div>
+      <br>
+        <div id="panel">
+        <h2 class="display-8">Chief Finance Officer</h2>
+        <p class="lead text-justify">
+          ArchiBytes is an Indonesian-based start-up with a global vision in leveraging blockchain technology to enhance the lives of modern citizens of the world.
+     <br>
+     <br>
+            In the beginning of 2017, when I went back to my hometown Jakarta, my cousin somehow convinced me to invest in <i>Bitcoin</i>, Yes, the infamous <i>Cryptocurrency</i> on January 2017 equates to USD 937.
+          I had no idea why should I invest in Bitcoin, since I wasn't interested nor cared about it. Then in April 2017, I went back again to my hometown and Bitcoin equates to USD 1.447, growing up (+85%) only in 2 months.
+          With the value increase up to 85%, I was shocked and grew interest to do further research on Bitcoins. Later, the research became the basis for <a href="http://pustaka.unpad.ac.id/archives/170505" target="_blank">my undergradate thesis.</a>
+      <br>
+      <br>
+            While I was doing research on this matter, I realized that the crucial thing about this whole <i>cryptocurrency</i> debacle was not the Bitcoin value, but the <i>Blockchain</i>.
+            A digital core and decentralized ledger that is unhackable and allow users to be private with their own data.
+            Institutions, such as banks, no longer able to sell their customer's data to a third party and hackers no longer able to steal data/money caused by centralization.
+            All of these benefits are caused by a number of reasons. First, thanks to the encryption system known as a <i>private-key encryption</i>,
+            private data are transmitted between two parties securely in a split second.
+            It is very difficult for hackers to hijack or intercept the transmission when a jumbled up encrypted data needs to be decrypted quickly before reaching it's destination.
+            Second, blockchain uses <i>Peer-to-peer (P2P) network</i> to validate data movement from one point to another.
+            A group of nodes (devices with computing powers with its own unique IP addresses) will validate the transaction according to the protocol that is set by the system.
+            If you've heard the term <i>Bitcoin or cryptocurrency mining</i>, this is essentially what they're doing.
+            Validated transactions will then lead to the third point, where the processed data will be added to the blockchain ledger, known as blocks.
+            These blocks then are chained together, hence the term "Blockchain". When a new block is added to the chain, the data that has been processed can never be edited.
+            If past data is edited (or "hacked"), the whole chain will change form and the rest of the nodes in the P2P network will correct the "edited" ledger.
+            The reason why these nodes are able to identify the "edited" ledger is because all of these nodes talk to each other and have a copy (be it it in full set, or partial) of the blockchain ledger.
+            This decentralized system is a huge selling point for cryptocurrency and blockchain enthusiasts.
+            <br><br>
+          <img src="https://static1.squarespace.com/static/57f51e0e725e25e4b386e724/t/5b26654b1ae6cfe7a8d7639b/1529242983799/Blockchain+Protocol+vs+Blockchain+Apps?format=2500w" class="img-fluid rounded mx-auto d-block" alt="Responsive Image">
+            <br><br>
+             This is just a basic explanation of what blockchain technology is. More often than not, people mistake blockchain technology to a blockchain product.
+             It is very important to differentiate between the two. The technology is called a Blockchain Protocol whereas the product is called a Blockchain Application.
+             A good analogy is to imagine Blockchain Protocols as train tracks and Blockchain Applications as trains.
+             There are only a number of train tracks to be build upon, but new types of trains are launched daily.
+             As an example, Bitcoin - the cryptocurrency, is an application whereas Bitcoin - the protocol, is the underlying technology.
+             <br>
+             <br>
+             After I did research on this matter, it found out that all my cousins had mutual interests about blockchains. Based on this interest, we made a family company to do further research on blockchains.
+             My position is as <i>Chief Finance Officer</i> and what I do is calculating the cashflow of the company for the next five years and analyzing the technical and fundamental cryptocurency. I also calculate the profitability of the computer's mining machining.
+            if you're interested with what my start-up is working on, please do contact us at archipelabytes@gmail.com or tweet us at <a href="https://twitter.com/archibytes">@archibytesco</a>. We would love to hear from you!.
+        </p>
+  <hr>
+  <br>
+  <a href="https://www.blockchain.com/" target="_blank">
+  <img src="https://blog.blockchain.com/content/images/2018/03/logo-ghost-01.png" class="rounded mx-auto d-block" alt="Responsive image" width="355px;">
+  </a>
+   <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="copyright rounded float-left">
+        <a href="file:///C:/Kerja/Hacktiv/Adli/Fixed/home.html" rel="home" itemprop="url" class="logo">
+          <img width="40" src="http://logo.pizza/img/mr-grin/mr-grin.png" alt="">
+        </a>
+        © 2018 Adli Thirafi Soeratin
+      </div>
+      <div class="rounded float-right">
+        <a href="https://www.linkedin.com/in/adlithirafi/">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ln.svg" alt="">
+        </a>
+        <a href="https://twitter.com/adlithirafi">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/tw.svg" alt="">
+        </a>
+        <a href="https://ask.fm/adlithirafi">
+          <img height="24" width="24" src="https://vignette.wikia.nocookie.net/polscy-youtuberzy-eleven/images/d/d1/Owl_1024x1024.png/revision/latest?cb=20170818092057&path-prefix=pl" alt="">
+        </a>
+        <a href="https://www.instagram.com/adlithirafi/">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ins.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/adlithirafi">
+          <img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/fb.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- clock -->
+    <script type="text/javascript">
+      function showTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+
+        if(h == 0){
+            h = 12;
+        }
+
+        if(h > 12){
+            h = h - 12;
+            session = "PM";
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innterText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+      // <!-- end of clock -->
+      </script>
+
+      <script>
+      // slide toggle
+      $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+      </script>
+
+
+
+  </body>
+</html>
